@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw Valley Organic Jaggery Kaju Katli Packaging</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Kalam:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f5dc 0%, #fff8dc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 500px;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .packaging-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1200px;
+        }
+
+        /* Main Package Design */
+        .package-box {
+            width: 396px;
+            height: 324px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f5dc 0%, #fff8dc 50%, #faf0e6 100%);
+            border-radius: 20px;
+            box-shadow: 
+                0 20px 40px rgba(139, 69, 19, 0.15),
+                inset 0 1px 3px rgba(255, 255, 255, 0.3);
+            border: 2px solid #d2b48c;
+            transform: rotateX(-5deg) rotateY(15deg);
+            animation: gentleFloat 6s ease-in-out infinite;
+            overflow: hidden;
+        }
+
+        @keyframes gentleFloat {
+            0%, 100% { transform: rotateX(-5deg) rotateY(15deg) translateY(0px); }
+            50% { transform: rotateX(-2deg) rotateY(18deg) translateY(-8px); }
+        }
+
+        /* Kraft Paper Texture */
+        .package-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(139, 69, 19, 0.03) 0%, transparent 60%),
+                radial-gradient(circle at 80% 70%, rgba(160, 82, 45, 0.03) 0%, transparent 60%),
+                radial-gradient(circle at 40% 80%, rgba(101, 67, 33, 0.02) 0%, transparent 50%),
+                repeating-linear-gradient(45deg, transparent, transparent 1px, rgba(139, 69, 19, 0.01) 1px, rgba(139, 69, 19, 0.01) 2px);
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
+        /* Logo Section */
+        .logo-section {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        .logo-main {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #8b4513;
+            margin-bottom: 2px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .logo-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 8px;
+            font-weight: 600;
+            color: #654321;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Organic Certification Badge */
+        .organic-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 85px;
+            height: 85px;
+            background: linear-gradient(135deg, #6b8e23 0%, #87a96b 100%);
+            border-radius: 50%;
+            border: 3px solid #87a96b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 16px rgba(107, 142, 35, 0.3);
+            z-index: 10;
+        }
+
+        .organic-badge .percent {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: -2px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .organic-badge .text {
+            font-family: 'Inter', sans-serif;
+            font-size: 9px;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Main Product Title */
+        .product-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            text-align: center;
+            z-index: 5;
+        }
+
+        .product-main {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #2f1b14;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+            line-height: 1.1;
+        }
+
+        .product-sub {
+            font-family: 'Kalam', cursive;
+            font-size: 16px;
+            color: #654321;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+        }
+
+        /* Jaggery Based Badge */
+        .jaggery-badge {
+            position: absolute;
+            top: 130px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #daa520 0%, #b8860b 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #ffd700;
+            box-shadow: 
+                0 6px 12px rgba(218, 165, 32, 0.4),
+                inset 0 1px 3px rgba(255, 255, 255, 0.3);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .benefit-badge {
+            background: white;
+            border: 2px solid #6b8e23;
+            color: #6b8e23;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 8px rgba(107, 142, 35, 0.2);
+            white-space: nowrap;
+        }
+
+        .benefit-badge.premium {
+            background: linear-gradient(45deg, #daa520, #ffd700);
+            color: white;
+            border-color: #b8860b;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Kaju Katli Illustrations */
+        .kaju-katli {
+            position: absolute;
+            z-index: 2;
+        }
+
+        .kaju-katli-1 {
+            top: 80px;
+            left: 30px;
+            width: 40px;
+            height: 30px;
+            background: linear-gradient(135deg, #daa520 0%, #ffd700 50%, #daa520 100%);
+            transform: rotate(-15deg);
+            border-radius: 3px;
+            box-shadow: 
+                2px 2px 6px rgba(139, 69, 19, 0.2),
+                inset 1px 1px 2px rgba(255, 255, 255, 0.4);
+            opacity: 0.3;
+        }
+
+        .kaju-katli-2 {
+            top: 200px;
+            right: 40px;
+            width: 35px;
+            height: 25px;
+            background: linear-gradient(135deg, #daa520 0%, #ffd700 50%, #daa520 100%);
+            transform: rotate(25deg);
+            border-radius: 3px;
+            box-shadow: 
+                2px 2px 6px rgba(139, 69, 19, 0.2),
+                inset 1px 1px 2px rgba(255, 255, 255, 0.4);
+            opacity: 0.3;
+        }
+
+        .kaju-katli-3 {
+            top: 160px;
+            left: 60px;
+            width: 30px;
+            height: 20px;
+            background: linear-gradient(135deg, #daa520 0%, #ffd700 50%, #daa520 100%);
+            transform: rotate(-35deg);
+            border-radius: 3px;
+            box-shadow: 
+                2px 2px 6px rgba(139, 69, 19, 0.2),
+                inset 1px 1px 2px rgba(255, 255, 255, 0.4);
+            opacity: 0.2;
+        }
+
+        /* Jaggery Blocks */
+        .jaggery-block {
+            position: absolute;
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+            border-radius: 4px;
+            box-shadow: 
+                2px 2px 8px rgba(139, 69, 19, 0.3),
+                inset 1px 1px 3px rgba(160, 82, 45, 0.5);
+            z-index: 1;
+            opacity: 0.15;
+        }
+
+        .jaggery-1 {
+            top: 70px;
+            right: 25px;
+            width: 45px;
+            height: 35px;
+            transform: rotate(20deg);
+        }
+
+        .jaggery-2 {
+            bottom: 40px;
+            left: 25px;
+            width: 40px;
+            height: 30px;
+            transform: rotate(-10deg);
+        }
+
+        /* Decorative Leaves */
+        .leaf {
+            position: absolute;
+            z-index: 1;
+            opacity: 0.1;
+        }
+
+        .leaf::before {
+            content: '';
+            display: block;
+            width: 20px;
+            height: 30px;
+            background: linear-gradient(135deg, #6b8e23, #87a96b);
+            border-radius: 0 100% 0 100%;
+            transform: rotate(45deg);
+        }
+
+        .leaf-1 {
+            top: 40px;
+            left: 80px;
+            transform: rotate(-30deg);
+        }
+
+        .leaf-2 {
+            bottom: 30px;
+            right: 60px;
+            transform: rotate(60deg);
+        }
+
+        .leaf-3 {
+            top: 120px;
+            left: 15px;
+            transform: rotate(-60deg) scale(0.8);
+        }
+
+        /* Traditional Pattern Border */
+        .pattern-border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: 
+                repeating-linear-gradient(90deg, 
+                    transparent 0px, 
+                    transparent 8px,
+                    #daa520 8px,
+                    #daa520 10px,
+                    transparent 10px,
+                    transparent 18px,
+                    #b8860b 18px,
+                    #b8860b 20px);
+            opacity: 0.3;
+            border-radius: 0 0 18px 18px;
+        }
+
+        /* Design Information Panel */
+        .design-info {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border: 1px solid #e8dfc7;
+        }
+
+        .design-info h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #2f1b14;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .design-info h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            color: #8b4513;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .design-info p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: linear-gradient(135deg, #f5f5dc, #fff8dc);
+            border-radius: 12px;
+            border-left: 4px solid #6b8e23;
+        }
+
+        .feature-icon {
+            width: 20px;
+            height: 20px;
+            background: #6b8e23;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            font-size: 0.9rem;
+            color: #2f1b14;
+            font-weight: 500;
+        }
+
+        .specs-section {
+            background: linear-gradient(135deg, #2f1b14, #654321);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        .specs-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #daa520;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .spec-label {
+            font-weight: 600;
+            color: #f5f5dc;
+        }
+
+        .spec-value {
+            color: #d2b48c;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .package-box {
+                width: 350px;
+                height: 290px;
+            }
+            
+            .product-main {
+                font-size: 28px;
+            }
+            
+            .design-info {
+                padding: 25px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .package-box {
+                width: 300px;
+                height: 250px;
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            
+            .product-main {
+                font-size: 24px;
+            }
+            
+            .organic-badge {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .benefits {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+            
+            .benefit-badge {
+                font-size: 8px;
+                padding: 4px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="packaging-display">
+            <div class="package-box">
+                <!-- Logo Section -->
+                <div class="logo-section">
+                    <div class="logo-main">RAW VALLEY</div>
+                    <div class="logo-sub">Organic Products</div>
+                </div>
+
+                <!-- Organic Certification Badge -->
+                <div class="organic-badge">
+                    <div class="percent">100%</div>
+                    <div class="text">Organic</div>
+                </div>
+
+                <!-- Main Product Title -->
+                <div class="product-title">
+                    <div class="product-main">Organic Jaggery<br>Kaju Katli</div>
+                    <div class="product-sub">Authentic Indian Sweet</div>
+                </div>
+
+                <!-- Jaggery Based Badge -->
+                <div class="jaggery-badge">Jaggery Based</div>
+
+                <!-- Benefits Section -->
+                <div class="benefits">
+                    <div class="benefit-badge">No Added Sugar</div>
+                    <div class="benefit-badge">Authentic Taste</div>
+                    <div class="benefit-badge premium">Premium Cashews</div>
+                </div>
+
+                <!-- Kaju Katli Illustrations -->
+                <div class="kaju-katli kaju-katli-1"></div>
+                <div class="kaju-katli kaju-katli-2"></div>
+                <div class="kaju-katli kaju-katli-3"></div>
+
+                <!-- Jaggery Block Illustrations -->
+                <div class="jaggery-block jaggery-1"></div>
+                <div class="jaggery-block jaggery-2"></div>
+
+                <!-- Decorative Leaves -->
+                <div class="leaf leaf-1"></div>
+                <div class="leaf leaf-2"></div>
+                <div class="leaf leaf-3"></div>
+
+                <!-- Traditional Pattern Border -->
+                <div class="pattern-border"></div>
+            </div>
+        </div>
+
+        <div class="design-info">
+            <h1>Design Completed</h1>
+            <h2>Raw Valley Organic Jaggery Kaju Katli</h2>
+            <p>Professional packaging design featuring all required elements: organic certification, traditional aesthetics, premium positioning, and health-conscious appeal.</p>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">Product name clearly displayed</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">Kaju katli & jaggery visuals</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">100% Organic certification</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">Jaggery-based emphasis</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">Health benefits highlighted</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">Raw Valley logo prominent</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">Earthy, natural color palette</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">Kraft paper texture & patterns</div>
+                </div>
+            </div>
+
+            <div class="specs-section">
+                <h3>Design Specifications</h3>
+                <div class="spec-item">
+                    <span class="spec-label">Dimensions:</span>
+                    <span class="spec-value">5.5" × 4.5" × 1.5"</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Primary Colors:</span>
+                    <span class="spec-value">Kraft Brown, Organic Green, Jaggery Gold</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Typography:</span>
+                    <span class="spec-value">Playfair Display + Inter</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Style:</span>
+                    <span class="spec-value">Premium Traditional with Modern Clean Aesthetic</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Target:</span>
+                    <span class="spec-value">Health-conscious consumers</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
